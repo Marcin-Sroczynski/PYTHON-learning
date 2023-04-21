@@ -1,0 +1,9 @@
+import random
+
+
+numery = input ('czy chcesz poznac numery lotto? Y/N: ')
+if numery == 'Y':
+   for a in range(6):
+        print(random.randint(1,49))
+if numery== 'N':
+    print ('To spadaj')
