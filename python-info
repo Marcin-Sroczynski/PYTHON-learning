@@ -1,0 +1,265 @@
+PYTHON
+=============================================================================
+''  lub " "
+
+Typy zmiennych
+- int	11
+- float	1,333
+- str	'hello'
+
+we can change type of expression:
+CASTING --> float(2):2.0       -- zmieni int na float 
+            int(1.1):1         -- zmieni float na int (przy takiej zmianie tracimy częśc danych)
+            str(1):'1'         -- zmieniamy liczbę w słowo
+            
+NESTING -- jesli lista czy tuple zawiera inną tuple 
+
+
+print ('hello world')
+print()  ---> w nawiasie daje instrukcje dla funkcji co ma napisać/zrobić
+
+type(float(2))  -- 2 funkcje naraz , zmieni w float i poda typ danych po zmianie.
+
+działania:
+25/5        --> 5.0  float
+25//        --> 5  int 
+
+
+
+=============================================================================
+moduły 
+os  - np. getcwd() << podaje pwd 
+datetime 
+random
+sys  << informacje o systemie 
+	np. import sys
+	sys.platform 
+
+
+
+
+=============================================================================
+Funkcje
+
+import sys
+print (sys.version)     <-- sprawdzi wersje systemu
+
+#upper
+A = 'wyraz'
+B = A.upper()  --> zmiani w duze litery
+B = 'WYRAZ'
+
+#replace 
+A = 'michael jackson'
+B = A.replace('michael','janet')
+B = 'janet jackson'
+
+#find 
+name.find('el'):5 
+
+#extend 
+L = [1,2,3]
+L.extend([11,12])
+L = [1,2,3,11,12]
+
+#append     -- doda nowe elementy jako liste wewnątrz listy
+L.append  
+L = [1,2,3,[11,12]]
+
+#del   -- kasowanie
+L = [1,2,3]
+del(L[0])
+L = [2,3]
+
+lista_set.add(4)  --> funkcja .add  doda 4
+.remove(4) --> funkcja skasuje 4 
+
+set1 = ...
+set2 = ...
+set3 = set1&set2   --> stworzy set3 tylko z elementow wspólnych
+
+set1.issubset(set3) --> .issubset  czy dany set jest czescią innego
+
+set1.union(set2) -->  .union  doda doda wszystkie elem setów, NIE tylko wspólne  
+
+.difference --> rożnice  
+
+
+slownik.values() --> poda wszystkie values 
+.keys() --> poda klucze danego slownika 
+
+Słownik.items() – wyświetla obiekty słownika
+Słownik.clear() – usuwa wszystkie pary ze słownika
+Słownik.copy() – kopiuje słownik
+Słownik.get(k[d]) – parametr d jest opcjonalny. Zwraca słownik [k] jeśli k jest indeksem w słowniku, w przeciwnym wypadku zwraca d.
+Słownik.keys() – wyswietla listę kluczy słownika 
+Słownik = {}  - tworzy pusty słownik
+Słownik['klucz']=2 – dodaje do słownika nową parę				
+Słownik['klucz'] +=  - zwiększa wartość o podaną liczbę
+Słownik['klucz'] – wyświetla wartość przy danym kluczu 
+ 
+=============================================================================
+BOOLENS
+może być True or False
+true 1
+false0
+
+bool(1)  --> True 
+bool(2)  --> False 
+
+
+=============================================================================
+Dictionary {}
+key - value 
+np.
+{'key1':1,'key2':2}
+{'ket1':(3,3,3)}
+{'Marcin':1983}
+
+dodanie do dictionary --> dict['album']='2007'
+                            key           value 
+
+kasowanie z dictionary --> del(dict['album'])                            
+
+empty dictionary -->  A = {}
+
+slownik.values() --> poda wszystkie values 
+.keys() --> poda klucze danego slownika 
+
+
+Słownik.items() – wyświetla obiekty słownika
+Słownik.clear() – usuwa wszystkie pary ze słownika
+Słownik.copy() – kopiuje słownik
+Słownik.get(k[d]) – parametr d jest opcjonalny. Zwraca słownik [k] jeśli k jest indeksem w słowniku, w przeciwnym wypadku zwraca d.
+Słownik.keys() – wyswietla listę kluczy słownika 
+Słownik = {}  - tworzy pusty słownik
+Słownik['klucz']=2 – dodaje do słownika nową parę				
+Słownik['klucz'] +=  - zwiększa wartość o podaną liczbę
+Słownik['klucz'] – wyświetla wartość przy danym kluczu 
+
+
+
+nowy={}
+nowy['owoc']=12
+nowy['tomek']=['nowak']
+nowy.items()
+del słownik['klucz']                     -  usuwa dany obiekt
+If 'banany' in słownik:                  - zwiększa wartość obiektu            
+	Słownik['banany']+=1      
+If 'gruszki' not in słownik:             - dodaje obiekt jeśli go nie było
+	Slownik['gruszki']=2  
+If 'banany' in slownik:
+	Slownik['banany']+=1
+else
+=============================================================================
+STRINGS
+
+name = 'michael jackson'
+        0123456789.....     --> kazda litera ma swój index
+        
+ 
+#kazda litera moze byc pobrana osobno:
+ 
+np. name[0]:m 
+    name[6]:l 
+    name[0:4]:mich 
+    name[::2]:mcaljcsn  --> co druga litera
+    name[0:5:2]:mca     --> co druga litera, ale tylko do 4 (piąty element nie wchodzi)
+    print(name[6])      --> l 
+    name.find('el'):5 
+
+name = name + 'is the best'  
+name = 'michael jackson is the best'
+
+\n      --> nowa linia
+\t      --> tab
+\\      --> wyswietli jeden \ jako część textu 
+
+#Methods can be added to string:
+A = 'wyraz'
+B = A.upper()  --> zmiani w duze litery
+B = 'WYRAZ'
+
+A = 'michael jackson'
+B = A.replace('michael','janet')
+B = 'janet jackson'
+ 
+name.find('el'):5 
+ 
+len('marcin') --> 6  (poda liczbe liter)
+ 
+ 
+=============================================================================
+LISTS  []  moze sie zmianiać
+
+L = [1,2,3]
+
+# dodanie elementu do listy
+L.extend([11,12])
+L = [1,2,3,11,12]
+
+# dodanie listy do listy
+L.append  
+L = [1,2,3,[11,12]]
+
+#kasowanie
+del(L[0])
+L = [2,3]
+
+#--doda przecinek 
+A = ['hard rock']
+'hard rock'.split(',')  
+['hard','rock']
+
+# zamieni element na danej pozycji
+B = ['a','b','c']
+B[0] = 'A'
+B = ['A','b','c']
+
+=============================================================================
+TUPLE  ()  jest stała, nie moze sie zmieniać. Aby zmienić tuple trzeba utworzyć nową.
+ 
+rate = (10,9,6,5)
+rate[0]:10                  -- poda element z pozycji 0
+rate2 = rate + (13,14)      -- dodanie tylko poprzez utworzenie nowej tuple
+rate2 = (10,9,6,5,13,14)    
+rate_sort = sorted(rate2)   -- utworzenie nowej posortowanej tuple 
+
+nesting -- jesli lista czy tuple zawiera inną tuple 
+
+NT = (1,2,('pop','rock'))
+      0 1       2
+      
+NT[0]:1
+NT[2]:('pop','rock')
+NT[2][0]:pop    --> 2 to index w pierwszej tuple, 0 to z index pierwszego słowa tuple wewnątrz  
+NT[2][0][0]:p   --> 2 to index w pierwszej tuple, 0 to z index pierwszego słowa tuple wewnątrz, 0 to index litery z tego słowa 
+
+=============================================================================
+SET {}  
+nieuporządkowane , kasuje duplikaty
+
+zniama listy na set --> set(lista)
+np. lista = [1,2,3,3,1] 
+lista_set = set(lista)
+lista_set = {1,2,3}
+
+lista_set.add(4)  --> funkcja .add  doda 4
+.remove(4) --> funkcja skasuje 4 
+ 
+set1 = ...
+set2 = ...
+set3 = set1&set2   --> stworzy set3 tylko z elementow wspólnych
+
+set1.issubset(set3) --> .issubset  czy dany set jest czescią innego
+
+set1.union(set2) -->  .union  doda doda wszystkie elem setów, NIE tylko wspólne  
+
+.difference --> rożnice  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
